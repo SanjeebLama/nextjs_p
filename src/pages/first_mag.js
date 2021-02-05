@@ -1,6 +1,7 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
-import "theme";
+import { ThemeProvider } from "theme-ui";
+import theme from "theme";
 import { useRef, useState, useEffect } from "react";
 import { jsx, Box, Container, Image, Button } from "theme-ui";
 import SwiperCore, { Navigation, Pagination } from "swiper";
@@ -231,7 +232,7 @@ const styles = {
       transform: "translateY(-50%)",
       outline: 0,
       img: {
-        maxWidth: [8, 10, null, null, "100%"],
+        // maxWidth: [8, 10, null, null, "100%"],
       },
     },
     ".swiper-arrow-left": {
@@ -247,12 +248,5 @@ const styles = {
         marginRight: "-4px",
       },
     },
-  },
-  buttonWrapper: {
-    textAlign: ["center"],
-    position: ["static", null, null, "absolute"],
-    left: "50%",
-    top: 0,
-    transform: ["unset", null, null, "translateX(-50%)"],
   },
 };
