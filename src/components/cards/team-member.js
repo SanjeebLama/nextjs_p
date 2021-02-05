@@ -13,7 +13,7 @@ const TeamMember = ({ member }) => {
         <Heading as="h3">{member?.name}</Heading>
         <Text as="p">{member?.designation}</Text>
         <Link href={member?.link}>
-          <Button as="button">{member?.button}</Button>{" "}
+          <Button as="button">{member?.button}</Button>
         </Link>
         <Box sx={styles.socialLinks}>
           {member?.socialLinks?.map((social, index) => (
