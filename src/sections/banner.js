@@ -4,6 +4,7 @@ import { jsx, Box, Container, Button, Image } from "theme-ui";
 import { rgba } from "polished";
 import SectionHeading from "components/section-heading";
 import illustration from "assets/images/banner-illustration.png";
+import { NavLink } from "components/link";
 
 const Banner = () => {
   return (
@@ -12,12 +13,15 @@ const Banner = () => {
         <Box sx={styles.contentWrapper}>
           <SectionHeading
             sx={styles.heading}
-            title="Creativity starts with viewing the whole world differently"
-            description="Dami Hami - A platform for everyone"
+            title="Welcome to Dami hami,
+            A new platform for you."
+            description="Dami Hami is the go-to tool for helping today's businesses build tomorrow's leading businesses."
           />
           <Box as="figure" sx={styles.illustration}>
             <Box sx={styles.buttonWrapper}>
-              <Button>Get First Publication</Button>
+              <Button>
+                <NavLink path={"team"} label={"Get First Publication"} />
+              </Button>
             </Box>
             <Image src={illustration} alt="illustration" />
           </Box>
