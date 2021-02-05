@@ -7,7 +7,7 @@ import LogoSvg from "components/icons/logo";
 export default function Logo({ isSticky, footer, ...props }) {
   return (
     <Link path="/" sx={styles.logo} {...props}>
-      <h2>Dami Hami</h2>
+      Dami Hami
     </Link>
   );
 }

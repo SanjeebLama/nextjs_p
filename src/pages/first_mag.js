@@ -24,41 +24,41 @@ const data = [
     button: "I want to Read this",
     link: "/first_mag",
   },
-  // {
-  //   id: 2,
-  //   avatar: avatar2,
-  //   name: "Second Publication",
-  //   designation: "2020 - 02 - 12",
-  //   button: "Second Publication",
+  {
+    id: 2,
+    avatar: avatar2,
+    name: "Second Publication",
+    designation: "2020 - 02 - 12",
+    button: "Second Publication",
 
-  //   // socialLinks: [
-  //   //   {
-  //   //     name: "twitter",
-  //   //     link: "http://twitter.com",
-  //   //   },
-  //   //   {
-  //   //     name: "dribbble",
-  //   //     link: "http://dribbble.com",
-  //   //   },
-  //   // ],
-  // },
-  // {
-  //   id: 3,
-  //   avatar: avatar3,
-  //   name: "Third Publication",
-  //   designation: "2020 - 02 - 19",
-  //   button: "Third Publication",
-  //   // socialLinks: [
-  //   //   {
-  //   //     name: "twitter",
-  //   //     link: "http://twitter.com",
-  //   //   },
-  //   //   {
-  //   //     name: "github",
-  //   //     link: "http://github.com",
-  //   //   },
-  //   // ],
-  // },
+    // socialLinks: [
+    //   {
+    //     name: "twitter",
+    //     link: "http://twitter.com",
+    //   },
+    //   {
+    //     name: "dribbble",
+    //     link: "http://dribbble.com",
+    //   },
+    // ],
+  },
+  {
+    id: 3,
+    avatar: avatar3,
+    name: "Third Publication",
+    designation: "2020 - 02 - 19",
+    button: "Third Publication",
+    // socialLinks: [
+    //   {
+    //     name: "twitter",
+    //     link: "http://twitter.com",
+    //   },
+    //   {
+    //     name: "github",
+    //     link: "http://github.com",
+    //   },
+    // ],
+  },
 ];
 
 const OurTeam = () => {

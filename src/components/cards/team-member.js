@@ -12,7 +12,9 @@ const TeamMember = ({ member }) => {
       <Box sx={styles.about}>
         <Heading as="h3">{member?.name}</Heading>
         <Text as="p">{member?.designation}</Text>
-        <Button as="button">{member?.button}</Button>{" "}
+        <Link href={member?.link}>
+          <Button as="button">{member?.button}</Button>{" "}
+        </Link>
         <Box sx={styles.socialLinks}>
           {member?.socialLinks?.map((social, index) => (
             <Link href={social?.link} key={index}>
