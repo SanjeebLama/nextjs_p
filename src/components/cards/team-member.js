@@ -12,9 +12,9 @@ const TeamMember = ({ member }) => {
       <Box sx={styles.about}>
         <Heading as="h3">{member?.name}</Heading>
         <Text as="p">{member?.designation}</Text>
-        <Link href={member?.link}>
+        {/* <Link href={member?.link}>
           <Button as="button">{member?.button}</Button>
-        </Link>
+        </Link> */}
         <Box sx={styles.socialLinks}>
           {member?.socialLinks?.map((social, index) => (
             <Link href={social?.link} key={index}>

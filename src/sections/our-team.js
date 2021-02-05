@@ -1,164 +1,93 @@
 /** @jsxRuntime classic */
 /** @jsx jsx */
+import { ThemeProvider } from "theme-ui";
+import theme from "theme";
 import { useRef, useState, useEffect } from "react";
-import { jsx, Box, Container, Image } from "theme-ui";
+import { jsx, Box, Container, Image, Button } from "theme-ui";
 import SwiperCore, { Navigation, Pagination } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
 import SectionHeading from "components/section-heading";
 import TeamMember from "components/cards/team-member";
-
-import avatar1 from "assets/images/team/member1.png";
-import avatar2 from "assets/images/team/member2.png";
-import avatar3 from "assets/images/team/member3.png";
-import avatar4 from "assets/images/team/member4.png";
 import arrowRight from "assets/images/icons/arrow-right.png";
+
+import a from "assets/images/FirstMag/1.png";
+import b from "assets/images/FirstMag/1.1.png";
+import c from "assets/images/FirstMag/1.2.png";
+import d from "assets/images/FirstMag/1.3.png";
+import e from "assets/images/FirstMag/1.4.png";
+import f from "assets/images/FirstMag/1.5.png";
+import g from "assets/images/FirstMag/1.6.png";
+import h from "assets/images/FirstMag/1.7.png";
+import i from "assets/images/FirstMag/1.8.png";
+import j from "assets/images/FirstMag/1.9.png";
+import k from "assets/images/FirstMag/1.10.png";
+import l from "assets/images/FirstMag/1.11.png";
+import m from "assets/images/FirstMag/1.12.png";
+import no from "assets/images/FirstMag/1.13.jpg";
+import o from "assets/images/FirstMag/1.14.png";
 
 SwiperCore.use([Navigation, Pagination]);
 
 const data = [
   {
     id: 1,
-    avatar: avatar1,
-    name: "Emmalee Mclain",
-    designation: "Product Designer",
-    socialLinks: [
-      {
-        name: "twitter",
-        link: "http://twitter.com",
-      },
-      {
-        name: "github",
-        link: "http://github.com",
-      },
-      {
-        name: "dribbble",
-        link: "http://dribbble.com",
-      },
-    ],
+    avatar: a,
   },
   {
     id: 2,
-    avatar: avatar2,
-    name: "Daisy Morgan",
-    designation: "Lead developer",
-    socialLinks: [
-      {
-        name: "twitter",
-        link: "http://twitter.com",
-      },
-      {
-        name: "dribbble",
-        link: "http://dribbble.com",
-      },
-    ],
+    avatar: b,
   },
   {
     id: 3,
-    avatar: avatar3,
-    name: "Ariyanna Hicks",
-    designation: "Experience Designer",
-    socialLinks: [
-      {
-        name: "twitter",
-        link: "http://twitter.com",
-      },
-      {
-        name: "github",
-        link: "http://github.com",
-      },
-    ],
+    avatar: c,
   },
   {
     id: 4,
-    avatar: avatar4,
-    name: "Yamilet Hooker",
-    designation: "User interface designer",
-    socialLinks: [
-      {
-        name: "twitter",
-        link: "http://twitter.com",
-      },
-      {
-        name: "github",
-        link: "http://github.com",
-      },
-      {
-        name: "dribbble",
-        link: "http://dribbble.com",
-      },
-    ],
+    avatar: d,
   },
   {
     id: 5,
-    avatar: avatar1,
-    name: "Emmalee Mclain",
-    designation: "Product Designer",
-    socialLinks: [
-      {
-        name: "twitter",
-        link: "http://twitter.com",
-      },
-      {
-        name: "github",
-        link: "http://github.com",
-      },
-      {
-        name: "dribbble",
-        link: "http://dribbble.com",
-      },
-    ],
+    avatar: e,
   },
   {
     id: 6,
-    avatar: avatar2,
-    name: "Daisy Morgan",
-    designation: "Lead developer",
-    socialLinks: [
-      {
-        name: "twitter",
-        link: "http://twitter.com",
-      },
-      {
-        name: "dribbble",
-        link: "http://dribbble.com",
-      },
-    ],
+    avatar: f,
   },
   {
     id: 7,
-    avatar: avatar3,
-    name: "Ariyanna Hicks",
-    designation: "Experience Designer",
-    socialLinks: [
-      {
-        name: "twitter",
-        link: "http://twitter.com",
-      },
-      {
-        name: "github",
-        link: "http://github.com",
-      },
-    ],
+    avatar: g,
   },
   {
     id: 8,
-    avatar: avatar4,
-    name: "Yamilet Hooker",
-    designation: "User interface designer",
-    socialLinks: [
-      {
-        name: "twitter",
-        link: "http://twitter.com",
-      },
-      {
-        name: "github",
-        link: "http://github.com",
-      },
-      {
-        name: "dribbble",
-        link: "http://dribbble.com",
-      },
-    ],
+    avatar: h,
+  },
+  {
+    id: 9,
+    avatar: i,
+  },
+  {
+    id: 10,
+    avatar: j,
+  },
+  {
+    id: 11,
+    avatar: k,
+  },
+  {
+    id: 12,
+    avatar: l,
+  },
+  {
+    id: 13,
+    avatar: m,
+  },
+  {
+    id: 14,
+    avatar: no,
+  },
+  {
+    id: 15,
+    avatar: o,
   },
 ];
 
@@ -221,8 +150,8 @@ const OurTeam = () => {
       <Container ref={containerRef}>
         <SectionHeading
           sx={styles.heading}
-          title="Meet our Brands"
-          description="Build an incredible brand and grow your business with DamiHami all-in-one platform with amazing contents."
+          title="First Edition"
+          description=""
         />
       </Container>
       <Box
@@ -258,6 +187,7 @@ const OurTeam = () => {
           {data?.map((item) => (
             <SwiperSlide key={item.id}>
               <TeamMember member={item} />
+              {/* <h3 sx={styles.buttonWrapper}> Free</h3> */}
             </SwiperSlide>
           ))}
         </Swiper>
@@ -302,7 +232,7 @@ const styles = {
       transform: "translateY(-50%)",
       outline: 0,
       img: {
-        maxWidth: [8, 10, null, null, "100%"],
+        // maxWidth: [8, 10, null, null, "100%"],
       },
     },
     ".swiper-arrow-left": {

@@ -23,9 +23,9 @@ export default function IndexPage() {
         <Banner />
         <Services />
         {/* <Testimonials /> */}
-        {/* <OurTeam /> */}
-        <OtherServices />
-        <MagazineCard />
+        <OurTeam />
+        {/* <OtherServices /> */}
+        {/* <MagazineCard /> */}
         {/* <WhyUs /> */}
         <SubscribeUs />
       </Layout>

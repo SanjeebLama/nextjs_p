@@ -9,12 +9,9 @@ export default [
   },
   {
     path: "team",
-    label: "Brand",
+    label: "Magazine",
   },
-  {
-    path: "why-us",
-    label: "Why Us",
-  },
+  {},
   {},
   {},
 ];
